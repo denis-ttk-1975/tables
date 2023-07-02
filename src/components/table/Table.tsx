@@ -9,14 +9,12 @@ type TTableDimentions = {
 };
 
 export function Table(props: TTableDimentions) {
-  const [doubleNumberArray, setDoubleNumberArray] = useState<
-    [] | Array<{ row: number; column: number }>[]
-  >([]);
+  const [doubleNumberArray, setDoubleNumberArray] = useState<[] | Array<{ row: number; column: number }>[]>([]);
 
   useEffect(() => {
-    let newArray = [];
+    let newArray: Array<Array<{ row: number; column: number }>> = [];
     for (let i = 1; i <= props.row_number; i++) {
-      let newRow = [];
+      let newRow: Array<{ row: number; column: number }> = [];
       for (let j = 1; j <= props.column_number; j++) {
         newRow.push({ row: i, column: j });
       }
@@ -26,7 +24,7 @@ export function Table(props: TTableDimentions) {
   }, []);
 
   return (
-    <div className="Table">
+    <div className='Table'>
       <table>
         <caption>Табличка</caption>
         <tbody>

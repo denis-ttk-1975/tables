@@ -14,7 +14,7 @@ import { Table } from './components/table/Table';
 
 export default function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <h1>Hello world!</h1>
       <Table row_number={7} column_number={13} />
     </div>

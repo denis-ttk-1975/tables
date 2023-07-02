@@ -7,6 +7,7 @@ import './../../style.css';
 
 function integerDivision(raw: number, column: number) {
   console.log(raw % column);
+  alert(`Целочисленное деление номера ряда на номер колонки составит - ${raw % column}`);
 }
 
 export function Cell(props: TCellProps) {
@@ -20,10 +21,7 @@ export function Cell(props: TCellProps) {
   }, []);
 
   return (
-    <td
-      className="Cell"
-      onClick={() => integerDivision(coordinate.row, coordinate.column)}
-    >
+    <td className='Cell' onClick={() => integerDivision(coordinate.row, coordinate.column)}>
       {props.vertical_number}:{props.horizontal_number}
     </td>
   );
